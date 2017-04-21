@@ -37,6 +37,8 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.costLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(28, 48);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            20,
+            1000,
             0,
             0,
             0});
@@ -70,6 +72,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // fancyBox
             // 
@@ -82,6 +85,7 @@
             this.fancyBox.TabIndex = 2;
             this.fancyBox.Text = "Fancy Decorations";
             this.fancyBox.UseVisualStyleBackColor = true;
+            this.fancyBox.CheckedChanged += new System.EventHandler(this.fancyBox_CheckedChanged);
             // 
             // healthyBox
             // 
@@ -92,6 +96,7 @@
             this.healthyBox.TabIndex = 3;
             this.healthyBox.Text = "Healthy Option";
             this.healthyBox.UseVisualStyleBackColor = true;
+            this.healthyBox.CheckedChanged += new System.EventHandler(this.healthyBox_CheckedChanged);
             // 
             // printPreviewDialog1
             // 
@@ -103,11 +108,31 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Cost";
+            // 
+            // costLabel
+            // 
+            this.costLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.costLabel.Location = new System.Drawing.Point(87, 212);
+            this.costLabel.Name = "costLabel";
+            this.costLabel.Size = new System.Drawing.Size(108, 24);
+            this.costLabel.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(212, 261);
+            this.Controls.Add(this.costLabel);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.healthyBox);
             this.Controls.Add(this.fancyBox);
             this.Controls.Add(this.numericUpDown1);
@@ -133,6 +158,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label costLabel;
     }
 }
 

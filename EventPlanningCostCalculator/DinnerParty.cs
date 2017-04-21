@@ -29,11 +29,11 @@ namespace EventPlanningCostCalculator
         {
             if (fancy)
             {
-                CostOfDecorations = 15.00M * NumberOfPeople + 50.0M;
+                CostOfDecorations = (15.00M * NumberOfPeople) + 50.0M;
             }
             else
             {
-                CostOfDecorations = 7.50M * NumberOfPeople + 30.0M;  
+                CostOfDecorations = (7.50M * NumberOfPeople) + 30.0M;  
             }
         }
 
@@ -44,13 +44,14 @@ namespace EventPlanningCostCalculator
             if (healthyOption)
             {
                 // Apply the discount
-                return totalCost * 0.95M;
+                return totalCost * 0.95M; // Apply the 5% discount to the overall event cost if the non-alcoholic option was chosen
             }
             else
             {
                 return totalCost;
-            }   
-            
+            }            
         }
+
+
     }
 }
