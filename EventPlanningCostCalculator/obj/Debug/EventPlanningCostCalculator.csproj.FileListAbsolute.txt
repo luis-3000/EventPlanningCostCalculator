@@ -1,0 +1,9 @@
+c:\users\jose luis castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\bin\Debug\EventPlanningCostCalculator.exe.config
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\bin\Debug\EventPlanningCostCalculator.exe
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\bin\Debug\EventPlanningCostCalculator.pdb
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.Form1.resources
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.Properties.Resources.resources
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.csproj.GenerateResource.Cache
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.exe
+C:\Users\Jose Luis Castillo\documents\visual studio 2013\Projects\EventPlanningCostCalculator\EventPlanningCostCalculator\obj\Debug\EventPlanningCostCalculator.pdb
