@@ -60,15 +60,15 @@ namespace EventPlanningCostCalculator
             get {
                 decimal totalCost = CalculateCostOfDecorations();
                 totalCost +=   ( (CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople );
-            } 
 
-            if (HealthyOption)
-            {
-                // Apply the discount
-                totalCost * 0.95M; // Apply the 5% discount to the overall event cost if the non-alcoholic option was chosen
+                if (HealthyOption)
+                {
+                    // Apply the discount
+                    totalCost *= 0.95M; // Apply the 5% discount to the overall event cost if the non-alcoholic option was chosen
+                }
+
+                return totalCost;
             }
-
-            return totalCost;
         }
 
 
