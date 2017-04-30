@@ -44,6 +44,7 @@ namespace EventPlanningCostCalculator
         {
             dinnerParty.NumberOfPeople = (int)numericUpDown1.Value; // Needs to be cast as an 'int' since it's a Decimal property
             DisplayDinnerPartyCost(); // display cost anytime the number changes or the checkboxes are checked
+                                        // This method calls the CalculateCost() method, but not the CalculateCostOfDecorations() method.
         }
 
         /* Changes to the checkboxes on the form set the healthyOption and fancy booleans to true or false
@@ -53,6 +54,7 @@ namespace EventPlanningCostCalculator
             dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
             DisplayDinnerPartyCost(); 
         }
+
 
         private void healthyBox_CheckedChanged(object sender, EventArgs e)
         {

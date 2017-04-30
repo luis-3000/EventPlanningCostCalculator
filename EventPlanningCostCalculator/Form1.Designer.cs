@@ -92,9 +92,9 @@
             this.healthyBox.AutoSize = true;
             this.healthyBox.Location = new System.Drawing.Point(28, 147);
             this.healthyBox.Name = "healthyBox";
-            this.healthyBox.Size = new System.Drawing.Size(140, 24);
+            this.healthyBox.Size = new System.Drawing.Size(323, 24);
             this.healthyBox.TabIndex = 3;
-            this.healthyBox.Text = "Healthy Option";
+            this.healthyBox.Text = "Healthy Option (No alcohol, 5% discount)";
             this.healthyBox.UseVisualStyleBackColor = true;
             this.healthyBox.CheckedChanged += new System.EventHandler(this.healthyBox_CheckedChanged);
             // 
@@ -130,9 +130,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 261);
+            this.ClientSize = new System.Drawing.Size(359, 261);
             this.Controls.Add(this.costLabel);
             this.Controls.Add(this.label2);
+
             this.Controls.Add(this.healthyBox);
             this.Controls.Add(this.fancyBox);
             this.Controls.Add(this.numericUpDown1);
@@ -149,7 +150,7 @@
         }
 
         #endregion
-
+p
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox fancyBox;
