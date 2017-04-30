@@ -10,19 +10,23 @@ namespace EventPlanningCostCalculator
     {
         public const int CostOfFoodPerPerson = 25;
 
+        // These properties are set in the constructor and updated by the form,
+        // and they're used when calculating the cost.
         public int NumberOfPeople { get; set; }
 
         public bool FancyDecorations { get; set; }
 
         public bool HealthyOption { get; set; }
 
-
+        /* The constructor sets the three properties based on the valued passed into it by the form. */
         public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations) {
             this.NumberOfPeople = numberOfPeople;
             this.HealthyOption = healthyOption;
             this.FancyDecorations = fancyDecorations;
         }
 
+        /* By making this method private, I make sure that it can't be accessed from outside
+         * of the class, which will keep it from being misused. */
         private decimal CalculateCostOfDecorations() {
             
             decimal costOfDecorations = 0;
@@ -39,6 +43,8 @@ namespace EventPlanningCostCalculator
             return costOfDecorations;
         }
 
+        /* The private methods used in the cost calculation such as this method, access the
+         * properties so that they have the latest information from the form. */
         private decimal CalculateCostOfBeveragesPerPerson() {
 
             decimal costOfBeveragesPerPerson;
@@ -55,6 +61,9 @@ namespace EventPlanningCostCalculator
             return costOfBeveragesPerPerson;
         }
 
+        /* Now that the calculations are private and encapsulated behind the Cost property, there's no way for 
+         * the form to recalculate the cost of the decorations that doen't use the currently selected options.
+         * This has fixed the bug that changed the costs incorrectly every time the options were changed. */
         public decimal Cost { 
 
             get {

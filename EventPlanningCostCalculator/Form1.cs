@@ -35,13 +35,11 @@ namespace EventPlanningCostCalculator
             DisplayDinnerPartyCost();
         }
 
-
         private void healthyBox_CheckedChanged(object sender, EventArgs e)
         {
             dinnerParty.HealthyOption = healthyBox.Checked;
             DisplayDinnerPartyCost();
         }
-
 
         /* Hooking up this field to the NumberOfPeople variable created in the DinnerParty class
          * and display the cost in the form. */
