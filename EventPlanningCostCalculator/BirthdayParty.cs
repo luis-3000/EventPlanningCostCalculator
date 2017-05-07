@@ -54,6 +54,46 @@ namespace EventPlanningCostCalculator
                 return 40;
         }
 
+        /* This property treutns true if the writinng is too long for the cake.
+         * we'll use it to display a "TOO LONG" message to the user. */
+        public bool CakeWritingTooLong
+        {
+            get
+            {
+                if (CakeWriting.Length > MaxWritingLength())
+                    return true;
+                else
+                    return false;
+            }
+        }
 
+        /* Just like the one in the DinnerParty class. */
+        private decimal CalculateCostOfDecorations()
+        {
+            decimal costOfDecorations;
+            if (FancyDecorations)
+                costOfDecorations = (NumberOfPeople * 15.00M) + 50M;
+            else
+                costOfDecorations = (NumberOfPeople * 7.50M) + 30M;
+            return costOfDecorations;
+        }
+
+        /* The BirthdayParty class has a decimal Cost property, just like DinnerParty. But it does
+         * a different calculation that uses the CakeSize() method and actualLength field (which is set by the
+         * CakeWriting property). */
+        public decimal Cost 
+        {
+            get
+            {
+                decimal totalCost = CalculateCostOfDecorations();
+                totalCost += CostOfFoodPerPerson * NumberOfPeople;
+                decimal cakeCost;
+                if (CakeSize() == 8)
+                    cakeCost = 40M + ActualLength * .25M;
+                else
+                    cakeCost = 75M + ActualLength * .25M;
+                return totalCost + cakeCost;
+            }
+        }
     }
 }
