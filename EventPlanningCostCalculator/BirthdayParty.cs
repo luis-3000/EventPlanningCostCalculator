@@ -24,5 +24,36 @@ namespace EventPlanningCostCalculator
             this.FancyDecorations = fanceDecorations;
             this.CakeWriting = cakeWriting;
         }
+
+        /* A private property that calculates the actual length of the writing to use for the calculation. 
+         * If the writing is too long for the cake, this property calculates the actual number of letters
+         * that will fit on the cake. */
+        private int ActualLength 
+        {
+            get
+            {
+                if (CakeWriting.Length > MaxWritingLength())
+                    return MaxWritingLength();
+                else
+                    return CakeWriting.Length;
+            }
+        }
+
+        private int CakeSize() {
+            if (NumberOfPeople <= 4)
+                return 8;
+            else
+                return 16;
+        }
+
+        private int MaxWritingLength()
+        {
+            if (CakeSize() == 8)
+                return 16;
+            else
+                return 40;
+        }
+
+
     }
 }
